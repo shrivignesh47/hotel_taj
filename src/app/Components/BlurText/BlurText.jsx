@@ -72,7 +72,7 @@ const BlurText = ({
   );
 
   return (
-    <p ref={ref} className={`blur-text ${className} flex flex-wrap fabril-fatface`} >
+    <span ref={ref} className={`blur-text ${className} flex flex-wrap fabril-fatface`} >
       {springs.map((props, index) => (
         <animated.span
           key={index}
@@ -83,7 +83,7 @@ const BlurText = ({
           {animateBy === 'words' && index < elements.length - 1 && '\u00A0'}
         </animated.span>
       ))}
-    </p>
+    </span>
   );
 };
 

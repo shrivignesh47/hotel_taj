@@ -46,7 +46,9 @@ const Home = () => {
             <Vm />
             <InstagramEmbed/>
             <Slider />
+            <br></br>
             <Menu/>
+    
             <InfiniteMovingCardsDemo/>
             <Contact/>
         </div>

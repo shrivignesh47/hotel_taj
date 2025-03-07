@@ -8,14 +8,14 @@ export function InfiniteMovingCardsDemo() {
   return (
     <div className="relative">
       <div className="h-[40rem] mt-[-12vh] flex flex-col antialiased bg-[#121414] dark:bg-[#121415] dark:bg-grid-[#121415]/[0.05] items-center justify-center relative overflow-hidden fabril-fatface">
-        {/* Testimonials Title */}
+
         <h1 className="text-white">
           <BlurText
             text="TESTIMONIALS"
             delay={150}
             animateBy="words"
             direction="top"
-            className="text-5xl text-center text-[#d2a260] justify-center mb-3"
+            className="text-5xl text-center text-[#d2a260] justify-center mb-[-20vh]"
           />
         </h1>
         {/* Gap between Title and Cards */}

@@ -73,7 +73,7 @@ export default function Menu() {
             </motion.div>
             <motion.div
               className="flex flex-col items-center"
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}

@@ -54,7 +54,7 @@ const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
                     />
           </h1>
 
-          <TextGenerateEffect  className="mb-2 lg:mb-12 text-base lg:text-lg max-w-md" words= "At Hotel Taj, we craft exceptional meals blending tradition and innovation, using only the finest ingredients. Whether it’s a family meal, casual outing, or grand celebration, our elegant ambiance and impeccable service make every moment unforgettable. Indulge in aromatic Indian delicacies and global cuisines, thoughtfully prepared to delight your taste buds... Make your events truly special with our catering services!" />
+          <TextGenerateEffect  className="mb-2 lg:mb-12 text-base lg:text-lg max-w-md" words={words}/>
 
           <div className="flex space-x-3 lg:space-x-4 mb-8 lg:mb-12">
             {items.map((_, index) => (
