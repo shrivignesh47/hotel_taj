@@ -43,13 +43,9 @@ const Home = () => {
     return (
         <div className="container w-full">
             <MCarousel items={carouselItems} />
-
             <Vm />
             <InstagramEmbed/>
             <Slider />
-            <p className="mt-4 text-center text-white">
-            Experience luxury and comfort at its finest.
-            </p>
             <Menu/>
             <InfiniteMovingCardsDemo/>
             <Contact/>
