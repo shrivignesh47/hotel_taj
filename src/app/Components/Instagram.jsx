@@ -49,7 +49,7 @@ export function InstagramEmbed() {
               style={{ pointerEvents: "none" }}
             ></div>
             <div
-              className="elfsight-app-fc51a3d7-8e7c-41f0-8efb-d1ab120c441a border-[4px] border-[#d2a260] relative h-[62vh] lg:h-full rounded-lg overflow-hidden"
+              className="elfsight-app-292ddc9c-a038-4be3-8bc2-f0678f6e8966 border-[4px] border-[#d2a260] relative h-[62vh] lg:h-full rounded-lg overflow-hidden"
               data-elfsight-app-lazy
               style={{
                 width: "100%",
