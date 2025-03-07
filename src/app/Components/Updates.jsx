@@ -1,6 +1,5 @@
 'use client';   
 import React, { useEffect, useState } from 'react';
-import './Styles/Updates.css';
 import {SparklesText}   from '../../components/magicui/sparkles-text';
 
 export default function Updates() {
