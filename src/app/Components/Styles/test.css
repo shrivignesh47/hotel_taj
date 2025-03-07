@@ -1,0 +1,13 @@
+.moving-cards {
+    display: flex;
+    animation: moveCards 40s linear infinite;
+}
+
+@keyframes moveCards {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

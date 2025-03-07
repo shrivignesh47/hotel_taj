@@ -1,0 +1,23 @@
+/* Add this to your global CSS file or within the component's styles */
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left */
+    }
+}
+
+.animate-marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite; /* Adjust duration as needed */
+    will-change: transform; /* Optimize animation performance */
+}
+
+.marquee-container {
+    overflow: hidden;
+    width: 100%; /* Ensure the container is full width */
+    position: relative; /* Ensure proper positioning */
+}
