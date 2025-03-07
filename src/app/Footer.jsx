@@ -4,7 +4,7 @@ import Image from 'next/image'; // Import Image from next/image
 import swiggyLogo from '../../../public/Assests/zomato/swiggy1.svg';
 import zomatoLogo from '../../../public/Assests/zomato/zomato2.png';
 import swiggydeq from '../../../public/Assests/zomato/delivery.gif';
-import BlurText from "./BlurText/BlurText"; // Import BlurText component
+import BlurText from "./Components/BlurText/BlurText"; // Import BlurText component
 
 // Use string paths for images in the public directory
 const swiggyLogoPath = '/Assests/zomato/swiggy1.svg';
