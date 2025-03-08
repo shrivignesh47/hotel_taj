@@ -82,7 +82,7 @@ export default function Menu() {
                 text="..Swipe-->.."
                 className="mb-4 ml-auto ml-[10vh]"
               />
-              <div className="w-full max-w-xs md:max-w-md mr-20 lg:mr-0">
+              <div className="w-full max-w-xs md:max-w-md mr-20 sm:mr-15 md:mr-[26vh] lg:mr-[22vh] xl:mr-0">
                 <Swiper
                   effect={"cards"}
                   grabCursor={true}
@@ -90,7 +90,7 @@ export default function Menu() {
                   className="menuswiper ml-3 lg:ml-0" // Added responsive margin-left
                   style={{
                     width: "125%",
-                    height: "400px", // Set a fixed height for Swiper
+                    height: "450px", // Set a fixed height for Swiper
                     overflow: "hidden",
                     borderRadius: "20px",
                   }}

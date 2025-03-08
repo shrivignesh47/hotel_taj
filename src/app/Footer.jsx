@@ -17,39 +17,43 @@ export default function Footer() {
             <p className="text-gray-400">📍 Old Amirtha Hotel Building, New Main Bazaar Road, Ooty, Tamil Nadu 643001</p>
             <p className="text-gray-400">📞 +91 89404 03040</p>
           </div>
-          {/* Center - Navigation Links */}
-          <div className="hidden md:flex md:justify-right md:items-right md:w-[90vh] fabril-fatface">
+          {/* Center - Delivery, GIF & Socials */}
+          <div className="flex flex-col items-center md:w-1/3 space-y-4 ml-[25vh] md:ml-0">
+            <BlurText text="Order on" delay={150} animateBy="words" direction="top" className="fabril-fatface text-lg" />
+            <Image src="/Assests/zomato/delivery.gif" alt="Swiggy Delivery" width={70} height={70} className="w-16" /> 
+            <div className="flex space-x-12"> 
+              <a href="https://www.swiggy.com/menu/114563?source=sharing" target="_blank" rel="noopener noreferrer">
+                <Image src="/Assests/zomato/swiggy1.svg" alt="Swiggy" width={100} height={100} className="w-20 hover:scale-110 transition" /> 
+              </a>
+              <a href="https://link.zomato.com/xqzv/rshare?id=7466380336cb9158" target="_blank" rel="noopener noreferrer">
+                <Image src="/Assests/zomato/zomato2.png" alt="Zomato" width={100} height={100} className="w-20 hover:scale-110 transition" /> 
+              </a>
+            </div>
+            <div className="flex space-x-4 mt-3"> 
+              <a href="https://www.facebook.com/hoteltajooty" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="cursor-pointer hover:text-blue-500 text-lg" /> 
+              </a>
+              <a href="https://www.instagram.com/hotel_taj_ooty_/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="cursor-pointer hover:text-pink-500 text-lg" /> 
+              </a>
+            </div>
+          </div>
+          {/* Right - Navigation Links */}
+          <div className="hidden md:flex md:justify-end md:items-center md:w-1/3 fabril-fatface">
             <nav className="flex space-x-4">
               <a href="/" className="hover:text-[#d2a260]">
                 <BlurText text="Home" delay={150} animateBy="words" direction="top" className="fabril-fatface text-lg" />
               </a>
-              <a href="/menu" className="hover:text-[#d2a260]">
+              <a href="/Menu" className="hover:text-[#d2a260]">
                 <BlurText text="Menu" delay={150} animateBy="words" direction="top" className="fabril-fatface text-lg" />
               </a>
-              <a href="/about" className="hover:text-[#d2a260]">
+              <a href="/About" className="hover:text-[#d2a260]">
                 <BlurText text="About" delay={150} animateBy="words" direction="top" className="fabril-fatface text-lg" />
               </a>
-              <a href="/contact" className="hover:text-[#d2a260]">
+              <a href="/Contact" className="hover:text-[#d2a260]">
                 <BlurText text="Contact" delay={150} animateBy="words" direction="top" className="fabril-fatface text-lg" />
               </a>
             </nav>
-          </div>
-          {/* Right - Delivery, GIF & Socials */}
-          <div className="flex flex-col items-center md:w-1/7 md:order-3 space-y-3 mt-10 md:space-y-0 md:mt-0">
-            <BlurText text="Order on" delay={150} animateBy="words" direction="top" className="fabril-fatface text-lg" />
-            <Image src="/Assests/zomato/delivery.gif" alt="Swiggy Delivery" width={56} height={56} className="w-14" />
-            <div className="flex space-x-9">
-              <Image src="/Assests/zomato/swiggy1.svg" alt="Swiggy" width={40} height={40} className="w-10 hover:scale-110 transition" />
-              <Image src="/Assests/zomato/zomato2.png" alt="Zomato" width={40} height={40} className="w-10 hover:scale-110 transition" />
-            </div>
-            <div className="flex space-x-2 mt-2">
-              <a href="https://www.facebook.com/hoteltajooty" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="cursor-pointer hover:text-blue-500" />
-              </a>
-              <a href="https://www.instagram.com/hotel_taj_ooty_/" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="cursor-pointer hover:text-pink-500" />
-              </a>
-            </div>
           </div>
         </div>
         {/* Bottom Line */}

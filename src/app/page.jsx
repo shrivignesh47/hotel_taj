@@ -41,7 +41,7 @@ const carouselItems = [
 
 const Home = () => {
     return (
-        <div className="container w-full">
+        <div className=" w-full">
             <MCarousel items={carouselItems} />
             <Vm />
             <InstagramEmbed/>
