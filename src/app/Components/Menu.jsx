@@ -7,7 +7,8 @@ import "./Styles/Swiper.css";
 import { TextHoverEffect } from "../../components/ui/text-hover-effect";
 import BlurText from "./BlurText/BlurText";
 import { motion } from "framer-motion"; // Import Framer Motion
-
+import Link from "next/link";
+import {  ChevronRight } from 'lucide-react';
 export default function Menu() {
   const menuImages = [
     "/Assests/menu/hotel_taj_menu_page-0001.jpg",
@@ -82,6 +83,12 @@ export default function Menu() {
                 text="..Swipe-->.."
                 className="mb-4 ml-auto ml-[10vh]"
               />
+              <Link href="/Menu">
+              <button className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm lg:text-base font-medium flex items-center">
+                <span className="mr-2 underline text-[#d2a260] underline-offset-4">View Full Menu</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </Link>
               <div className="w-full max-w-xs md:max-w-md mr-20 sm:mr-15 md:mr-[26vh] lg:mr-[22vh] xl:mr-0">
                 <Swiper
                   effect={"cards"}

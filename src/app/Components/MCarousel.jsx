@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, Utensils } from 'lucide-react';
 import BlurText from './BlurText/BlurText';
 import { SparklesText } from "../../components/magicui/sparkles-text";
 import { TextGenerateEffect } from "../../components/ui/text-generate-effect"
-
+import Link from 'next/link';
 const words = `At Hotel Taj we craft exceptional meals blending tradition and innovation, using only the finest ingredients. Whether it’s a family meal, casual outing, or grand celebration, our elegant ambiance and impeccable service make every moment unforgettable. Indulge in aromatic Indian delicacies and global cuisines, thoughtfully prepared to delight your taste buds... Make your events truly special with our catering services!
 `;
 const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
@@ -87,12 +87,16 @@ const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
               <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
             </button>
           </div>
+
           <div className="mt-8 lg:mt-12">
-              <button className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm lg:text-base font-medium flex items-center">
-                <span className="mr-2 underline text-[#d2a260] underline-offset-4">Why Choose Taj</span>
-                <ChevronRight className="w-4 h-4" />
-              </button>
-          </div>
+          <Link href="/About">
+            <button className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm lg:text-base font-medium flex items-center">
+              <span className="mr-2 underline text-[#d2a260] underline-offset-4">Why Choose Taj</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </Link>
+        </div>
+        
         </div>
         <div className="w-full lg:w-1/2 h-[300px] md:h-[400px] lg:h-screen relative">
           <div className="absolute top-0 left-0 w-full h-full bg-[#d2a260] rounded-t-[40%] lg:rounded-t-none lg:rounded-l-[40%] shadow-xl">

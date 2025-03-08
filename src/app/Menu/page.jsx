@@ -63,7 +63,7 @@ export default function Manu() {
               transform: `translateY(${scrollY * 0.4}px)`
             }}
           >
-            Culinary Excellence Since 1995
+            Culinary Excellence Since 1992
           </p>
         </div>
       </div>
