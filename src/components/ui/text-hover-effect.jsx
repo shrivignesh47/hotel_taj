@@ -26,8 +26,8 @@ export const TextHoverEffect = ({
   return (
     (<svg
       ref={svgRef}
-      width="50%"
-      height="50%"
+      width="55%"
+      height="55%"
       viewBox="0 0 300 100"
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setHovered(true)}
@@ -38,8 +38,8 @@ export const TextHoverEffect = ({
         <linearGradient
           id="textGradient"
           gradientUnits="userSpaceOnUse"
-          cx="50%"
-          cy="50%"
+          cx="45%"
+          cy="45%"
           r="25%">
           {hovered && (
             <>
@@ -83,8 +83,8 @@ export const TextHoverEffect = ({
         {text}
       </text>
       <motion.text
-        x="50%"
-        y="50%"
+        x="45%"
+        y="45%"
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
