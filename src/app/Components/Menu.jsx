@@ -46,7 +46,7 @@ export default function Menu() {
           </p>
         </motion.div>
         <div className="min-h-screen flex justify-center items-center bg-[#121414] px-6 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-9xl">
             <motion.div
               className="flex flex-col justify-center space-y-4 text-white"
               initial={{ opacity: 0, x: -50 }}
@@ -80,8 +80,8 @@ export default function Menu() {
               viewport={{ once: true }}
             >
               <TextHoverEffect
-                text="... Swipe-->.."
-                className="mb-7 ml-auto ml-[11vh]"
+                text="Swipe >"
+                className="mb-9 ml-auto ml-[14vh]"
               />
               <Link href="/Menu">
               <button className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm lg:text-base font-medium flex items-center">
