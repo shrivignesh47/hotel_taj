@@ -59,12 +59,12 @@ export const TextHoverEffect = ({
           initial={{ cx: "50%", cy: "50%" }}
           animate={maskPosition}
           // example for a smoother animation below
-          //   transition={{
-          //     type: "spring",
-          //     stiffness: 300,
-          //     damping: 50,
-          //   }}
-          transition={{ duration: duration ?? 0, ease: "easeOut" }}>
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 50,
+            }}
+>
           <stop offset="0%" stopColor="white" />
           <stop offset="100%" stopColor="black" />
         </motion.radialGradient>
@@ -73,8 +73,8 @@ export const TextHoverEffect = ({
         </mask>
       </defs>
       <text
-        x="50%"
-        y="50%"
+        x="45%"
+        y="45%"
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
@@ -101,8 +101,8 @@ export const TextHoverEffect = ({
         {text}
       </motion.text>
       <text
-        x="50%"
-        y="50%"
+        x="45%"
+        y="45%"
         textAnchor="middle"
         dominantBaseline="middle"
         stroke="url(#textGradient)"

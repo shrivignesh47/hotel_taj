@@ -81,7 +81,7 @@ export default function Menu() {
             >
               <TextHoverEffect
                 text="..Swipe-->.."
-                className="mb-4 ml-auto ml-[10vh]"
+                className="mb-7 ml-auto ml-[8vh]"
               />
               <Link href="/Menu">
               <button className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm lg:text-base font-medium flex items-center">
