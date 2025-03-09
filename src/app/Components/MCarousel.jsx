@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Utensils } from 'lucide-react';
+import React, { useState, useEffect ,useRef } from 'react';
+import { ChevronLeft, ChevronRight, Utensils, Play, Pause } from 'lucide-react';
 import BlurText from './BlurText/BlurText';
 import { SparklesText } from "../../components/magicui/sparkles-text";
 import { TextGenerateEffect } from "../../components/ui/text-generate-effect"
@@ -8,7 +8,8 @@ const words = `At Hotel Taj we craft exceptional meals blending tradition and in
 `;
 const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
@@ -17,19 +18,47 @@ const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? items.length - 1 : prevIndex - 1));
   };
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
+
 
   useEffect(() => {
-    if (!autoScroll) return;
+    if (!isPlaying && autoScroll) {
+      const interval = setInterval(() => {
+        nextSlide();
+      }, autoScrollInterval);
 
-    const interval = setInterval(() => {
-      nextSlide();
-    }, autoScrollInterval);
-
-    return () => clearInterval(interval);
-  }, [autoScroll, autoScrollInterval]);
+      return () => clearInterval(interval);
+    }
+  }, [isPlaying, autoScroll, autoScrollInterval]);
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-[#121414]">
+    <div className="absolute inset-0 z-0">
+    <video
+      ref={videoRef}
+      src="/Assests/tajbg1.mp4"
+      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+        isPlaying ? 'opacity-100' : 'opacity-0'
+      }`}
+      muted
+      playsInline
+      preload="auto"
+    />
+    <div
+      className={`absolute inset-0 transition-colors duration-700 ${
+        isPlaying ? 'bg-transparent' : 'bg-[#121414]'
+      }`}
+    />
+  </div>
       <div className="flex flex-col lg:flex-row h-full">
         <div className="w-full lg:w-1/2 flex flex-col justify-center px-6 md:px-12 lg:px-16 py-12 lg:py-0 text-white relative z-10">
           <div className="flex items-center mb-6 lg:mb-8">
@@ -57,36 +86,48 @@ const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
           <TextGenerateEffect  className="mb-2 lg:mb-12 text-base lg:text-lg max-w-md" words={words}/>
 
           <div className="flex space-x-3 lg:space-x-4 mb-8 lg:mb-12">
-            {items.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
-                  currentIndex === index 
-                    ? 'bg-white text-[#d2a260] shadow-lg' 
-                    : 'border-2 border-white/70 text-white hover:border-white'
-                }`}
-              >
-                {String(index + 1).padStart(2, '0')}
-              </button>
-            ))}
-          </div>
-          <div className="flex space-x-3 lg:space-x-4">
-            <button 
-              onClick={prevSlide}
-              className="p-2 lg:p-3 border-2 border-white/70 rounded-full text-white hover:bg-white hover:text-emerald-600 transition-all duration-300"
-              aria-label="Previous slide"
+          {items.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                currentIndex === index
+                  ? 'bg-white text-[#d2a260] shadow-lg'
+                  : 'border-2 border-white/70 text-white hover:border-white'
+              }`}
             >
-              <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
+              {String(index + 1).padStart(2, '0')}
             </button>
-            <button 
-              onClick={nextSlide}
-              className="p-2 lg:p-3 border-2 border-white/70 rounded-full text-white hover:bg-white hover:text-emerald-600 transition-all duration-300"
-              aria-label="Next slide"
-            >
-              <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
-            </button>
-          </div>
+          ))}
+        </div>
+        <div className="flex space-x-3 lg:space-x-4">
+          <button
+            onClick={prevSlide}
+            className="p-2 lg:p-3 border-2 border-white/70 rounded-full text-white hover:bg-white hover:text-emerald-600 transition-all duration-300"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="p-2 lg:p-3 border-2 border-white/70 rounded-full text-white hover:bg-white hover:text-emerald-600 transition-all duration-300"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
+          </button>
+          <button
+            onClick={toggleVideo}
+            className="p-2 lg:p-3 border-2 border-white/70 rounded-full text-white hover:bg-white hover:text-emerald-600 transition-all duration-300"
+            aria-label="Toggle video"
+          >
+            {isPlaying ? (
+              <Pause className="w-5 h-5 lg:w-6 lg:h-6" />
+            ) : (
+              <Play className="w-5 h-5 lg:w-6 lg:h-6" />
+            )}
+          </button>
+        </div>
+
 
           <div className="mt-8 lg:mt-12">
           <Link href="/About">
@@ -127,3 +168,4 @@ const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
 };
 
 export default MCarousel;
+
