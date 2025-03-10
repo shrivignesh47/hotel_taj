@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Utensils, Play, Pause } from 'lucide-react';
 import BlurText from './BlurText/BlurText';
 import { SparklesText } from "../../components/magicui/sparkles-text";
@@ -9,7 +9,23 @@ const words = `At Hotel Taj we craft exceptional meals blending tradition and in
 const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [videoSrc, setVideoSrc] = useState("/Assests/tajbg1.mp4"); // Default to large screen video
   const videoRef = useRef(null);
+
+  useEffect(() => {
+    const updateVideoSource = () => {
+      if (window.innerWidth <= 768) {
+        setVideoSrc("/Assests/tajbg2.mp4");
+      } else {
+        setVideoSrc("/Assests/tajbg1.mp4");
+      }
+    };
+
+    updateVideoSource(); // Set initial video source
+    window.addEventListener('resize', updateVideoSource); // Update on resize
+
+    return () => window.removeEventListener('resize', updateVideoSource);
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
@@ -45,7 +61,7 @@ const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
     <div className="absolute inset-0 z-0">
     <video
       ref={videoRef}
-      src="/Assests/tajbg1.mp4"
+      src={videoSrc} // Use state for video source
       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
         isPlaying ? 'opacity-100' : 'opacity-0'
       }`}
@@ -140,7 +156,9 @@ const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
         
         </div>
         <div className="w-full lg:w-1/2 h-[300px] md:h-[400px] lg:h-screen relative">
-          <div className="absolute top-0 left-0 w-full h-full bg-[#d2a260] rounded-t-[40%] lg:rounded-t-none lg:rounded-l-[40%] shadow-xl">
+          <div className={`absolute top-0 left-0 w-full h-full bg-[#d2a260] rounded-t-[40%] lg:rounded-t-none lg:rounded-l-[40%] shadow-xl ${
+            isPlaying && window.innerWidth > 1024 ? 'hidden' : 'block'
+          }`}>
             <div className="w-full h-full flex items-center justify-center p-8 md:p-12 lg:p-16">
               {items.map((item, index) => (
                 <div
