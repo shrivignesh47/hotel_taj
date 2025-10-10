@@ -32,7 +32,7 @@ function About() {
               <Star className="w-6 h-6 text-amber-600" />
             </div>
             <div>
-              <div className="text-2xl fabril-fatface font-bold text-[#d2a260]">Signature</div>
+              <div className="text-2xl fabril-fatface font-bold text-[#d2a260]">Signature Dish</div>
               <BlurText text="Biriyani Specialist" delay={150} animateBy="words" direction="top" className="custom-class text-white fabril-fatface text-2xl" />
             </div>
           </div>
