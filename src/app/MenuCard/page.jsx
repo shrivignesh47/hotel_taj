@@ -16,7 +16,7 @@ const HotelTajMenu = () => {
   if (!ready) return null;
 
   // Menu images
-  const menuPages = Array.from({ length: 10 }, (_, i) =>
+  const menuPages = Array.from({ length: 11 }, (_, i) =>
     `/Assests/menu/hotel_taj_menu_page-000${i + 1}.jpg`
   );
 
