@@ -17,16 +17,16 @@ const HotelTajMenu = () => {
 
   // Hardcoded menu image paths
   const menuPages = [
-    "/Assets/menu/hotel_Taj_Menu-01.jpg",
-    "/Assets/menu/hotel_Taj_Menu-02.jpg",
-    "/Assets/menu/hotel_Taj_Menu-03.jpg",
-    "/Assets/menu/hotel_Taj_Menu-04.jpg",
-    "/Assets/menu/hotel_Taj_Menu-05.jpg",
-    "/Assets/menu/hotel_Taj_Menu-06.jpg",
-    "/Assets/menu/hotel_Taj_Menu-07.jpg",
-    "/Assets/menu/hotel_Taj_Menu-08.jpg",
-    "/Assets/menu/hotel_Taj_Menu-09.jpg",
-    "/Assets/menu/hotel_Taj_Menu-10.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-01.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-02.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-03.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-04.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-05.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-06.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-07.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-08.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-09.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-10.jpg",
   ];
 
   return (
