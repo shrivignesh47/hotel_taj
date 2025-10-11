@@ -16,16 +16,16 @@ import { ChevronRight } from "lucide-react";
 export default function Menu() {
   // Use string paths for images in public folder
   const menuImages = [
-    "/Assets/menu/hotel_taj_Menu-01.jpg",
-    "/Assets/menu/hotel_taj_Menu-02.jpg",
-    "/Assets/menu/hotel_taj_Menu-03.jpg",
-    "/Assets/menu/hotel_taj_Menu-04.jpg",
-    "/Assets/menu/hotel_Taj_Menu-05.jpg",
-    "/Assets/menu/hotel_Taj_Menu-06.jpg",
-    "/Assets/menu/hotel_Taj_Menu-07.jpg",
-    "/Assets/menu/hotel_Taj_Menu-08.jpg",
-    "/Assets/menu/hotel_Taj_Menu-09.jpg",
-    "/Assets/menu/hotel_Taj_Menu-010.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-01.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-02.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-03.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-04.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-05.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-06.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-07.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-08.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-09.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-010.jpg",
   ];
 
   return (
