@@ -15,10 +15,19 @@ const HotelTajMenu = () => {
 
   if (!ready) return null;
 
-  // Menu images
-  const menuPages = Array.from({ length: 9 }, (_, i) =>
-  `/Assests/menu/hotel_taj_menu_page-${String(i + 1).padStart(2, '0')}.jpg`
-  );
+  // Hardcoded menu image paths
+  const menuPages = [
+    "/Assests/menu/hotel_taj_menu_page-01.jpg",
+    "/Assests/menu/hotel_taj_menu_page-02.jpg",
+    "/Assests/menu/hotel_taj_menu_page-03.jpg",
+    "/Assests/menu/hotel_taj_menu_page-04.jpg",
+    "/Assests/menu/hotel_taj_menu_page-05.jpg",
+    "/Assests/menu/hotel_taj_menu_page-06.jpg",
+    "/Assests/menu/hotel_taj_menu_page-07.jpg",
+    "/Assests/menu/hotel_taj_menu_page-08.jpg",
+    "/Assests/menu/hotel_taj_menu_page-09.jpg",
+    "/Assests/menu/hotel_taj_menu_page-10.jpg",
+  ];
 
   return (
     <div className="w-screen h-screen bg-black flex justify-center items-center">
