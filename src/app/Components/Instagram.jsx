@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import briyanibg from "../../../public/Assets/tajbg1"; // Import the video file
 export function InstagramEmbed() {
   useEffect(() => {
     const elfsightScript = document.createElement("script");
