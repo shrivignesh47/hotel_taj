@@ -11,14 +11,14 @@ import Link from "next/link";
 import {  ChevronRight } from 'lucide-react';
 export default function Menu() {
   const menuImages = [
-    "/Assests/menu/hotel_taj_menu_page-0001.jpg",
-    "/Assests/menu/hotel_taj_menu_page-0002.jpg",
-    "/Assests/menu/hotel_taj_menu_page-0003.jpg",
-    "/Assests/menu/hotel_taj_menu_page-0004.jpg",
-    "/Assests/menu/hotel_taj_menu_page-0005.jpg",
-    "/Assests/menu/hotel_taj_menu_page-0006.jpg",
-    "/Assests/menu/hotel_taj_menu_page-0007.jpg",
-    "/Assests/menu/hotel_taj_menu_page-0008.jpg",
+    "/Assets/menu/hotel_taj_menu_page-0001.jpg",
+    "/Assets/menu/hotel_taj_menu_page-0002.jpg",
+    "/Assets/menu/hotel_taj_menu_page-0003.jpg",
+    "/Assets/menu/hotel_taj_menu_page-0004.jpg",
+    "/Assets/menu/hotel_taj_menu_page-0005.jpg",
+    "/Assets/menu/hotel_taj_menu_page-0006.jpg",
+    "/Assets/menu/hotel_taj_menu_page-0007.jpg",
+    "/Assets/menu/hotel_taj_menu_page-0008.jpg",
   ];
 
   return (

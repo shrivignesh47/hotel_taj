@@ -9,15 +9,15 @@ const words = `At Hotel Taj we craft exceptional meals blending tradition and in
 const MCarousel = ({ items, autoScroll = true, autoScrollInterval = 6000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [videoSrc, setVideoSrc] = useState("/Assests/tajbg1.mp4"); // Default to large screen video
+  const [videoSrc, setVideoSrc] = useState("/Assets/tajbg1.mp4"); // Default to large screen video
   const videoRef = useRef(null);
 
   useEffect(() => {
     const updateVideoSource = () => {
       if (window.innerWidth <= 768) {
-        setVideoSrc("/Assests/tajbg2.mp4");
+        setVideoSrc("/Assets/tajbg2.mp4");
       } else {
-        setVideoSrc("/Assests/tajbg1.mp4");
+        setVideoSrc("/Assets/tajbg1.mp4");
       }
     };
 

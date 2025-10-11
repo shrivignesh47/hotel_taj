@@ -20,13 +20,13 @@ export default function Footer() {
           {/* Center - Delivery, GIF & Socials */}
           <div className="flex flex-col items-center md:w-1/3 space-y-4 ml-[25vh] md:ml-0">
             <BlurText text="Order on" delay={150} animateBy="words" direction="top" className="fabril-fatface text-lg" />
-            <Image src="/Assests/zomato/delivery.gif" alt="Swiggy Delivery" width={70} height={70} className="w-16" /> 
+            <Image src="/Assets/zomato/delivery.gif" alt="Swiggy Delivery" width={70} height={70} className="w-16" /> 
             <div className="flex space-x-12"> 
               <a href="https://www.swiggy.com/menu/114563?source=sharing" target="_blank" rel="noopener noreferrer">
-                <Image src="/Assests/zomato/swiggy1.svg" alt="Swiggy" width={100} height={100} className="w-20 hover:scale-110 transition" /> 
+                <Image src="/Assets/zomato/swiggy1.svg" alt="Swiggy" width={100} height={100} className="w-20 hover:scale-110 transition" /> 
               </a>
               <a href="https://link.zomato.com/xqzv/rshare?id=7466380336cb9158" target="_blank" rel="noopener noreferrer">
-                <Image src="/Assests/zomato/zomato2.png" alt="Zomato" width={100} height={100} className="w-20 hover:scale-110 transition" /> 
+                <Image src="/Assets/zomato/zomato2.png" alt="Zomato" width={100} height={100} className="w-20 hover:scale-110 transition" /> 
               </a>
             </div>
             <div className="flex space-x-4 mt-3"> 

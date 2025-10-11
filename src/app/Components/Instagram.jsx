@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import briyanibg from "../../../public/Assests/tajbg1.mp4"; // Import the video file
+import briyanibg from "../../../public/Assets/tajbg1.mp4"; // Import the video file
 export function InstagramEmbed() {
   useEffect(() => {
     const elfsightScript = document.createElement("script");
@@ -22,7 +22,7 @@ export function InstagramEmbed() {
           muted
           className="w-full h-[40vh] sm:h-[50vh] lg:h-[90vh] object-cover absolute top-0 left-0 z-0 "
         >
-          <source src="/Assests/tajbg.mp4" type="video/mp4" />
+          <source src="/Assets/tajbg.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute top-0 left-0 w-full h-full "></div>

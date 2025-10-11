@@ -11,31 +11,31 @@ const carouselItems = [
       id: 1,
       title: "Fresh Salad",
       description: "Organic greens with feta cheese and walnuts",
-      image: "/Assests/posters/pt1.jpg"
+      image: "/Assets/posters/pt1.jpg"
     },
     {
       id: 2,
       title: "Pasta Dish",
       description: "Homemade pasta with seasonal vegetables",
-      image: "/Assests/posters/pt5.jpg" // Ensure this path is correct
+      image: "/Assets/posters/pt5.jpg" // Ensure this path is correct
     },
     {
       id: 3,
       title: "Fruit Bowl",
       description: "Fresh seasonal fruits for a healthy dessert",
-      image: "/Assests/posters/pt2.jpg"
+      image: "/Assets/posters/pt2.jpg"
     },
     {
       id: 4,
       title: "Smoothie Bowl",
       description: "Nutrient-packed smoothie with toppings",
-      image: "/Assests/posters/pt4.jpg"
+      image: "/Assets/posters/pt4.jpg"
     },
     {
       id: 5,
       title: "Smoothie Bowl",
       description: "Nutrient-packed smoothie with toppings",
-      image: "/Assests/posters/pt8.png"
+      image: "/Assets/posters/pt8.png"
     },
   ];
 

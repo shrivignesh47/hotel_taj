@@ -14,7 +14,7 @@ const Navbar = () => {
                 <div className="flex items-center">
                     <Link href="/">
                         <Image
-                            src="/Assests/taj.png"
+                            src="/Assets/taj.png"
                             alt="Hotel Taj Logo"
                             width={80}
                             height={1}
