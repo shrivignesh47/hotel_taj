@@ -26,7 +26,8 @@ const HotelTajMenu = () => {
     "/Assets/Menus/hotel_Taj_Menu-07.jpg",
     "/Assets/Menus/hotel_Taj_Menu-08.jpg",
     "/Assets/Menus/hotel_Taj_Menu-09.jpg",
-    "/Assets/Menus/hotel_Taj_Menu-10.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-010.jpg",
+    "/Assets/Menus/hotel_Taj_Menu-011.jpg",
   ];
 
   return (
